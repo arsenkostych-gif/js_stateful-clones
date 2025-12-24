@@ -1,7 +1,14 @@
-function transformStateWithClones(state, actions) {
+// Додайте 'export' на початку
+export function transformStateWithClones(state, actions) {
   const history = [];
-  // Create a working copy of the initial state
   let currentState = { ...state };
+
+  for (const action of actions) {
+    // ... ваш код далі ...
+  }
+
+  return history;
+}
 
   for (const action of actions) {
     switch (action.type) {
@@ -37,4 +44,5 @@ function transformStateWithClones(state, actions) {
   }
 
   return history;
-}
+
+
